@@ -7,12 +7,14 @@ t.resizable(0,0)
 t.wm_attributes('-topmost',1)
 w=1260
 h=630
-p = PhotoImage(file = './Gold_brick_block(1).png')
-p3 = PhotoImage(file = './1png2.png')
-p2 = PhotoImage(file = './1png1.png')
-p1 = PhotoImage(file = './1png.png')
-p4 = PhotoImage(file = './1взрыв1.png')
-po = PhotoImage(file = './стена.png')
+image_ = 'Images'
+sound = 'Sound'
+p = PhotoImage(file = f'./{image_}/Gold_brick_block(1).png')
+p3 = PhotoImage(file = f'./{image_}/1png2.png')
+p2 = PhotoImage(file = f'./{image_}/1png1.png')
+p1 = PhotoImage(file = f'./{image_}/1png.png')
+p4 = PhotoImage(file = f'./{image_}/1взрыв1.png')
+po = PhotoImage(file = f'./{image_}/стена.png')
 canvas = Canvas(width = w, height = h, bd = 0, highlightthickness = 0, bg = 'grey')
 canvas.pack()
 canvas.create_image(0, 0, image = po, anchor = NW)
@@ -181,5 +183,5 @@ while True:
         canvas.create_text(w // 2,h // 2,text = 'Игрок справа выйграл', font = 'Arial 40', fill = 'green')
         break
     t.update()
-PlaySound('./KO.wav', SND_FILENAME)
+PlaySound(f'./{sound}/KO.wav', SND_FILENAME)
 t.mainloop()
