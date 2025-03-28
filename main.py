@@ -1,6 +1,6 @@
 import random
 from tkinter import *
-#from winsound import *
+from winsound import *
 from time import sleep
 from parames import *
 
@@ -223,5 +223,5 @@ while True:
         canvas.create_text(w // 2,h // 2,text = 'Игрок справа выйграл', font = 'Arial 40', fill = 'green')
         break
     t.update()
-#PlaySound(f'./{sound}/KO.wav', SND_FILENAME)
+PlaySound(f'./{sound}/KO.wav', SND_FILENAME)
 t.mainloop()
