@@ -135,7 +135,7 @@ class Warrior():
                 self.id = canvas.create_image(self.x1, self.y1,image = p2, anchor = SW)
                 self.timer = 40
                 t.update()
-                if self.y1 <= id2.y1 and self.x1 >= id2.x1 and self.x1 <= id2.x1 + 63 and self.y1 >= id2.y1 - 120:
+                if self.y1 - 5 <= id2.y1 and self.x1 >= id2.x1 and self.x1 <= id2.x1 + 63 and self.y1 >= id2.y1 - 120:
                     id2.health -= helf
                     if id2.health < 0:
                         id2.health = 0
