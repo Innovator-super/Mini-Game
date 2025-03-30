@@ -170,10 +170,10 @@ class Warrior():
             self.fall = 0
         if self.fall <= 0:
             self.landing = False
-            for i in [blocks[x1][y1], blocks[x2][y1], blocks[x1][y2], blocks[x2][y2]]:
-                if i == False:
+            for i in ((x1, y1), (x1, y2), (x2, y1), (x2, y2)):
+                if blocks[i[0]][i[1]] == False:
                     continue
-                if self.x1 + 55 > i.x and self.x1 - 40 < i.x and self.y1 <= i.y and self.y1 > i.y - 3:
+                if self.x1 + 55 > blocks[i[0]][i[1]].x and self.x1 - 40 < blocks[i[0]][i[1]].x and self.y1 <= blocks[i[0]][i[1]].y and self.y1 > blocks[i[0]][i[1]].y - 3:
                     self.landing = True
                     break
         if self.y1 >= h and self.fall <= 0:
